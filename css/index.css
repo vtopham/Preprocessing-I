@@ -109,7 +109,7 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  list-style: square;
 }
 blockquote,
 q {
@@ -130,74 +130,128 @@ table {
 * {
   box-sizing: border-box;
 }
+p,
+li,
+a {
+  font-family: 'Montserrat', sans-serif;
+  padding: 2% 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
 .border-container {
-  background-color: #F7CAC9;
+  background-color: #A5BC59;
+  background-image: url("../img/bg.jpg");
   width: 800px;
-  height: 100vh;
   margin: 0 auto;
+  padding: 3%;
   display: flex;
 }
-p {
-  font-family: 'Montserrat', sans-serif;
+@media (max-width: 500px) {
+  .border-container {
+    width: 100%;
+  }
 }
 .container {
   background-color: white;
-  width: 90%;
-  height: 90vh;
+  width: 100%;
   margin: 0 auto;
   padding: 0 4%;
   align-self: center;
 }
-header {
+nav {
   display: flex;
-  height: 200px;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  color: darkgray;
+}
+nav a:hover {
+  color: pink;
+}
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.top-container {
+  display: flex;
   width: 100%;
   justify-content: space-between;
 }
-header .name,
-header .contact {
-  width: 40%;
+@media (max-width: 500px) {
+  .top-container {
+    flex-direction: column;
+  }
+}
+.top-container .name,
+.top-container .contact {
   display: flex;
   flex-direction: column;
+  width: 40%;
   justify-content: center;
 }
-header h1 {
+@media (max-width: 500px) {
+  .top-container .name,
+  .top-container .contact {
+    width: 100%;
+    text-align: center;
+  }
+}
+.top-container h1 {
   font-size: 5rem;
   padding: 4% 0;
   font-family: 'PT Serif', serif;
 }
-header .remote,
-header .home {
+.top-container .remote,
+.top-container .home {
   display: flex;
   flex-direction: column;
   padding: 4% 0;
 }
-header .remote p,
-header .home p {
-  padding: 2% 0;
+.top-container .remote p,
+.top-container .home p {
   text-align: right;
-  font-size: 0.8rem;
 }
-header .remote {
-  border-bottom: 5px solid black;
+.top-container .remote {
+  border-bottom: 5px solid pink;
 }
 .main-content {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .main-content .col-1,
 .main-content .col-2 {
-  width: 40%;
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .main-content .col-1,
+  .main-content .col-2 {
+    width: 100%;
+  }
 }
 .main-content .content-box {
   display: flex;
   flex-direction: column;
+  padding: 2% 0;
 }
 .main-content .content-box h2 {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid pink;
+  padding: 2% 0;
 }
 .main-content .content-box .body-text {
-  border: 1px solid black;
+  padding: 2% 0;
+}
+.main-content .content-box .ref,
+.main-content .content-box .job {
+  padding: 2% 0;
 }
