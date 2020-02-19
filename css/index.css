@@ -86,7 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -130,73 +130,53 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
-  width: 800px;
-  margin: 0 auto;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 1.4rem;
-}
-h3 {
-  font-size: 1rem;
-}
-header nav {
-  text-align: right;
-  margin: 4% 0;
-}
-header nav a {
-  margin-left: 5%;
-  text-decoration: none;
-  color: black;
-}
-.introduction {
-  background-color: #E9ECEF;
-  padding: 4%;
-}
-.intro-top {
-  padding: 2% 0;
-  border-bottom: 1px solid darkgray;
-}
-.intro-top img,
-.intro-top h1,
-.intro-top h2 {
-  margin: 1% 0;
-}
-.intro-bottom {
-  padding: 2% 0;
-}
-.intro-bottom p,
-.intro-bottom button {
-  margin: 1% 0;
-}
-.intro-bottom button {
-  width: 20%;
-  height: 40px;
-  border-radius: 10%;
-  font-size: 1.2rem;
-  color: white;
-  background-color: #808080;
-}
-.middle {
+.border-container {
+  background-color: #F7CAC9;
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  border: 1px solid red;
 }
-.middle div {
+.container {
+  background-color: white;
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto;
+  align-self: center;
+}
+header {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+header .name,
+header .contact {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header h1 {
+  font-size: 5rem;
+  padding: 4% 0;
+  font-family: 'PT Serif', serif;
+}
+header .remote,
+header .home {
+  display: flex;
+  flex-direction: column;
+  padding: 4% 0;
+}
+header .remote p,
+header .home p {
+  padding: 2% 0;
+  text-align: right;
+  font-size: 0.8rem;
+}
+header .remote {
+  border-bottom: 5px solid black;
 }

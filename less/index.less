@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -53,29 +53,82 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
 
+
+//variables baby!
+
+@nice-header-font: 'PT Serif', serif;
+@nice-body-font: 'Montserrat', sans-serif;
+
+p {
+	font-family: @nice-body-font;
+}
+//make the outside pretty
+
+.border-container {
+	
+	background-color: #F7CAC9;
 
 	width: 800px;
+	height: 100vh;
 	margin: 0 auto;
+
+	display:flex;
+
 }
 
-h1, h2, h3, h4, h5, h6, a, p {
-	font-family: 'Roboto', sans-serif;
+.container {
+	background-color: white;
+
+	width: 90%;
+	height: 90vh;
+	margin: 0 auto;
+
+	align-self: center;
 }
 
-h1 {
-	font-size: 2rem;
+header {
+	display: flex;
+
+	height: 200px;
+	width: 100%;
+
+	justify-content: space-evenly;
+
+	.name, .contact {
+		width: 40%;
+
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+
+	}
+	h1 {
+		font-size: 5rem;
+		padding: 4% 0;
+
+		font-family: @nice-header-font;
+	}
+
+	.remote, .home {
+		display: flex;
+		flex-direction: column;
+
+		padding: 4% 0;
+
+		p {
+			padding: 2% 0;
+			text-align: right;
+			font-size: .8rem;
+		}
+	}
+
+	.remote {
+		border-bottom: 5px solid black;
+	}
+
 }
 
-h2 {
-	font-size: 1.4rem;
-}
-
-h3 {
-	font-size: 1rem;
-}
 
 
-// Navigation style 
