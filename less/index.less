@@ -60,9 +60,21 @@ table {
 @nice-header-font: 'PT Serif', serif;
 @nice-body-font: 'Montserrat', sans-serif;
 
-p {
-	font-family: @nice-body-font;
+@nice-padding: 2% 0;
+
+
+//Mixins hell yeah!
+
+
+.flexcol() {
+	display: flex;
+	flex-direction: column;
 }
+
+.help() {
+	border: 1px solid black;
+}
+
 //make the outside pretty
 
 .border-container {
@@ -77,12 +89,17 @@ p {
 
 }
 
+p {
+	font-family: @nice-body-font;
+}
+
 .container {
 	background-color: white;
 
 	width: 90%;
 	height: 90vh;
 	margin: 0 auto;
+	padding: 0 4%;
 
 	align-self: center;
 }
@@ -93,13 +110,13 @@ header {
 	height: 200px;
 	width: 100%;
 
-	justify-content: space-evenly;
+	justify-content: space-between;
+	
 
 	.name, .contact {
 		width: 40%;
 
-		display: flex;
-		flex-direction: column;
+		.flexcol();
 
 		justify-content: center;
 
@@ -112,13 +129,12 @@ header {
 	}
 
 	.remote, .home {
-		display: flex;
-		flex-direction: column;
+		.flexcol();
 
 		padding: 4% 0;
 
 		p {
-			padding: 2% 0;
+			padding: @nice-padding;
 			text-align: right;
 			font-size: .8rem;
 		}
@@ -129,6 +145,41 @@ header {
 	}
 
 }
+
+//Style the main content
+
+.main-content {
+	display: flex;
+	justify-content: space-between;
+
+	.col-1, .col-2 {
+		width: 40%;
+	}
+
+	
+	.content-box {
+
+		.flexcol();
+
+		h2 {
+			text-transform: uppercase;
+			font-family: @nice-body-font;
+
+			border-bottom: 5px solid black;
+
+			// padding: @nice-padding;
+		}
+
+		.body-text{
+			.help();
+		}
+
+		
+	}
+
+}
+
+
 
 
 

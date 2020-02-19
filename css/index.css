@@ -130,9 +130,6 @@ table {
 * {
   box-sizing: border-box;
 }
-p {
-  font-family: 'Montserrat', sans-serif;
-}
 .border-container {
   background-color: #F7CAC9;
   width: 800px;
@@ -140,18 +137,22 @@ p {
   margin: 0 auto;
   display: flex;
 }
+p {
+  font-family: 'Montserrat', sans-serif;
+}
 .container {
   background-color: white;
   width: 90%;
   height: 90vh;
   margin: 0 auto;
+  padding: 0 4%;
   align-self: center;
 }
 header {
   display: flex;
   height: 200px;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 header .name,
 header .contact {
@@ -179,4 +180,24 @@ header .home p {
 }
 header .remote {
   border-bottom: 5px solid black;
+}
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content .col-1,
+.main-content .col-2 {
+  width: 40%;
+}
+.main-content .content-box {
+  display: flex;
+  flex-direction: column;
+}
+.main-content .content-box h2 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: 5px solid black;
+}
+.main-content .content-box .body-text {
+  border: 1px solid black;
 }
