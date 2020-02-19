@@ -83,7 +83,7 @@ table {
 
 
 //text n stuff
-p , li, a{
+p , li, a {
 	font-family: @nice-body-font;
 	padding: @nice-padding;
 	font-size: .8rem;
@@ -104,7 +104,7 @@ p , li, a{
 	padding: 3%;
 	display:flex;
 
-	@media (max-width: 500px){
+	@media (max-width: 800px){
 		width: 100%;
 	}
 
@@ -176,6 +176,10 @@ nav {
 		padding: 4% 0;
 
 		font-family: @nice-header-font;
+
+		@media (max-width: 800px){
+			font-size: 4em;
+		}
 	}
 
 	.remote, .home {

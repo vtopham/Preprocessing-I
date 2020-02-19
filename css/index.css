@@ -146,7 +146,7 @@ a {
   padding: 3%;
   display: flex;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .border-container {
     width: 100%;
   }
@@ -203,6 +203,11 @@ nav a:hover {
   font-size: 5rem;
   padding: 4% 0;
   font-family: 'PT Serif', serif;
+}
+@media (max-width: 800px) {
+  .top-container h1 {
+    font-size: 4em;
+  }
 }
 .top-container .remote,
 .top-container .home {
