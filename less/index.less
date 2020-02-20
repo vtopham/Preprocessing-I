@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -33,7 +33,7 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+	list-style:square;
 }
 blockquote, q {
 	quotes: none;
@@ -53,7 +53,199 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+
+
+//variables baby!
+
+@nice-header-font: 'PT Serif', serif;
+@nice-body-font: 'Montserrat', sans-serif;
+
+@nice-padding: 2% 0;
+
+@bar-color: pink;
+
+
+//Mixins hell yeah!
+
+
+.flexcol() {
+	display: flex;
+	flex-direction: column;
 }
+
+.help() {
+	border: 1px solid black;
+}
+
+.divider(){
+	border-bottom: 5px solid @bar-color;
+}
+
+
+//text n stuff
+p , li, a {
+	font-family: @nice-body-font;
+	padding: @nice-padding;
+	font-size: .8rem;
+	line-height: 1.5;
+}
+
+//make the outside pretty
+
+.border-container {
+	
+	background-color: #A5BC59;
+	background-image: url("../img/bg.jpg");
+
+	width: 800px;
+	// height: 110vh;
+	margin: 0 auto;
+
+	padding: 3%;
+	display:flex;
+
+	@media (max-width: 800px){
+		width: 100%;
+	}
+
+}
+
+
+
+.container {
+	background-color: white;
+
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 4%;
+
+	align-self: center;
+}
+
+
+// header & navigation baby
+
+nav {
+	display: flex;
+
+	justify-content: space-between;
+
+	a {
+		text-decoration: none;
+		color: darkgray;
+
+		&:hover {
+			color: @bar-color;
+		}
+	}
+
+	@media (max-width: 500px){
+		flex-direction: column;
+		align-items: center;
+	}
+
+}
+
+
+// top section stuff 
+.top-container {
+	display: flex;
+	width: 100%;
+
+	justify-content: space-between;
+	
+	@media (max-width: 500px) {
+		flex-direction: column;
+		
+	}
+
+	.name, .contact {
+		.flexcol();
+		
+		width: 40%;
+		justify-content: center;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			text-align: center;
+		}
+
+	}
+	h1 {
+		font-size: 5rem;
+		padding: 4% 0;
+
+		font-family: @nice-header-font;
+
+		@media (max-width: 800px){
+			font-size: 4em;
+		}
+	}
+
+	.remote, .home {
+		.flexcol();
+
+		padding: 4% 0;
+
+		p {
+			text-align: right;
+		}
+	}
+
+	.remote {
+		.divider();
+	}
+
+}
+
+//Style the main content
+
+.main-content {
+	display: flex;
+	justify-content: space-between;
+
+	@media (max-width: 500px){
+		.flexcol();
+	}
+
+	.col-1, .col-2 {
+		width: 45%;
+
+		@media(max-width: 500px){
+			width: 100%;
+		}
+	}
+
+	//get the box for each item to look nice and stuff
+	.content-box {
+
+		.flexcol();
+
+		padding: @nice-padding;
+
+		h2 {
+			text-transform: uppercase;
+			font-family: @nice-body-font;
+
+			.divider();
+
+			padding: @nice-padding;
+		}
+
+		.body-text{
+			padding: @nice-padding;
+
+
+		}
+	.ref, .job {
+		padding: @nice-padding;
+	}
+		
+	}
+
+}
+
+
+
+
 
